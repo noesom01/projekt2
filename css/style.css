@@ -4,11 +4,73 @@
 }
 
 body{
-    font-family: "inter", sans-serif;
-    font-weight: 700;
+    font-family: "inter", sans-serif; /*brødtekst til inter*/
+    font-weight: 700; /*fed skrift*/
+    color: #1c1c1c;
 }
 h1,h2{
-    font-family: "poppins", sans-serif;
-    font-weight: 700;
+    font-family: "poppins", sans-serif;/*h1, h2 til poppins*/
+    font-weight: 700; /*fed skrift*/
+    color: #1c1c1c;
+}
+
+img{
+    max-width: 100%; /*sikre billederne responsivitet*/
+}
+
+/*Navigation*/
+
+header{
+    background-color: #F5F5F5;
+    padding: 1em;
+}
+
+nav ul{
+    list-style: none; /*fjerner bulletpoints*/
+    padding: 0;
+
+}
+
+nav li{
+    padding: 0.8em; /*mere afstand omkring hvert link*/
+
+}
+
+nav li a{
+color: #1c1c1c;
+text-decoration: none; /*fjerner understregning på links*/
+font-size: 20px;
+}
+
+nav li a:hover{
+    text-decoration: underline; /*tilføjer understregning på links ved hover*/
+    color: #9C3D00;
+}
+
+/*Main*/
+main{
+    margin: 2em;
+
+}
+
+section{
+    margin-bottom: 5em;
+
+}
+
+/*Media query til desktop vesionen*/
+
+@media screen and (min-width: 769px){
+#bars{
+    display: none; /*fjerner burgermenu ikon på desktop versionen*/
+}
+nav ul{
+    display: flex;
+    justify-content: center; /*centrerer navigationen*/
+}
+
+
+
+
 }
 
