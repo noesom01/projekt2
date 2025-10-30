@@ -13,6 +13,7 @@ h1,h2{
     font-weight: 700; /*fed skrift*/
     color: #1c1c1c;
     font-size: 30px;
+    margin-bottom: 15px;
 }
 
 img{
@@ -24,16 +25,24 @@ img{
 header{
     background-color: #F5F5F5;
     padding: 1em;
+    position: fixed; /*gør at headeren bliver selvom man scroller*/
+    width: 100%;
+    top:0;
+    z-index: 1000;
 }
+
 
 nav ul{
     list-style: none; /*fjerner bulletpoints*/
     padding: 0;
+    display: flex;
+    gap: 30px; /*afstand mellem links*/
+    margin: 0;
 
 }
 
 nav li{
-    padding: 0.8em; /*mere afstand omkring hvert link*/
+    padding: 0; 
 
 }
 
@@ -48,9 +57,21 @@ nav li a:hover{
     color: #9C3D00;
 }
 
+nav a.active{
+    text-decoration: underline; /*viser det aktive link med understreg i headeren*/
+    color: #9C3D00;
+}
+
+.logo img{
+    width:auto;
+    height: 60px;
+    display: block;
+}
+
 /*Main*/
 main{
     margin: 2em;
+    margin-top: 120px;
 
 }
 
@@ -59,13 +80,28 @@ section{
 
 }
 
+p{
+    line-height: 1.6; /*øger linjeafstand*/
+    margin-bottom: 30px;
+}
+
+.Find-ro-her{ /*Styling af Find ro her knap på forsiden*/
+    background-color: #8F4300;
+    color: #FFFFFF;
+    padding: 0.8em 3em;
+    display: inline-block;
+    margin-top: 1em;
+    text-decoration: none;
+    border-radius: 15px; /*bløde og runde kanter på knappen*/
+}
+
+
 /*Media query til desktop vesionen*/
 
 @media screen and (min-width: 769px){
 #bars{
     display: none; /*skjuler burgermenu ikon på desktop versionen*/
 }
-
 
 nav ul{
     display: flex;
