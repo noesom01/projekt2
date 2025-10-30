@@ -1,4 +1,4 @@
-const bars = document.querySelector(".bars");
+const bars = document.querySelector("#bars");
 
 const openNav = () => {
     document.querySelector("header > nav").
