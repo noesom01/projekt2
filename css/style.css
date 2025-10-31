@@ -4,16 +4,20 @@
 }
 
 body{
-    font-family: "inter", sans-serif; /*brødtekst til inter*/
-    font-weight: 700; /*fed skrift*/
+    font-family: "inter", sans-serif;
+    font-weight: 700;
     color: #1c1c1c;
 }
+
 h1,h2{
-    font-family: "poppins", sans-serif;/*h1, h2 til poppins*/
-    font-weight: 700; /*fed skrift*/
-    color: #1c1c1c;
+    font-family: "poppins", sans-serif;
+    font-weight: 700;
     font-size: 30px;
     margin-bottom: 15px;
+}
+
+h3{
+    margin-top: 15px;
 }
 
 img{
@@ -23,144 +27,170 @@ img{
 /*Navigation*/
 
 header{
-    background-color: #F5F5F5;
     padding: 1em;
-    position: fixed; /*gør at headeren bliver selvom man scroller*/
-    width: 100%;
-    top:0;
-    z-index: 1000;
+    background-color: #f5f5f5;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
 
 nav ul{
     list-style: none; /*fjerner bulletpoints*/
     padding: 0;
-    display: flex;
-    gap: 30px; /*afstand mellem links*/
     margin: 0;
-
-}
-
-nav li{
-    padding: 0; 
-
+    gap: 2em; /*afstand mellem links*/
+    display: flex;
+    align-items: center;
+    
+    
 }
 
 nav li a{
-color: #1c1c1c;
-text-decoration: none; /*fjerner understregning på links*/
-font-size: 20px;
+    color: #1c1c1c;
+    text-decoration: none; /*fjerner understregning på links*/
+    font-size: 20px;
 }
 
 nav li a:hover{
     text-decoration: underline; /*tilføjer understregning på links ved hover*/
-    color: #9C3D00;
+    color: #9c3d00;
 }
 
 nav a.active{
     text-decoration: underline; /*viser det aktive link med understreg i headeren*/
-    color: #9C3D00;
+    color: #9c3d00;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 1.5em;
 }
 
 .logo img{
-    width:auto;
     height: 60px;
+    width: auto;
     display: block;
 }
 
 /*Main*/
-main{
-    margin: 2em;
-    margin-top: 130px;
 
+main{
+    margin: 4em;
 }
 
 section{
-    margin-bottom: 5em;
-
+    margin: 3em;
 }
 
 p{
-    line-height: 1.6; /*øger linjeafstand*/
+    line-height: 1.6em;
     margin-bottom: 30px;
 }
 
-.Find-ro-her{ /*Styling af Find ro her knap på forsiden*/
+.find-ro-her{ /*Styling af Find ro her knap på forsiden*/
     background-color: #8F4300;
     color: #FFFFFF;
     padding: 0.8em 3em;
     display: inline-block;
     margin-top: 1em;
+    margin-bottom: 2em;
     text-decoration: none;
     border-radius: 15px; /*bløde og runde kanter på knappen*/
 }
 
+.læs-mere{ /*Styling af læs mere knapperne*/
+    background-color: #8F4300;
+    color: #FFFFFF;
+    padding: 0.8em 3em;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 15px; /*bløde og runde kanter på knappen*/
+}
 
-/*Media query til desktop vesionen*/
+/*media query til dekstop versionen*/
 
 @media screen and (min-width: 769px){
-#bars{
-    display: none; /*skjuler burgermenu ikon på desktop versionen*/
+    #bars{
+        display: none; /*skjuler burgermenu ikon på desktop*/;
+    }
+
+    nav ul{
+        display: flex;
+        justify-content: center; /*centrerer navigationen*/
+    }
+
+    section:nth-of-type(1) div{
+        width: 50%;
+    }
+
+    section:nth-of-type(1) img{
+        width: 80%;
+    }
+
+    section:nth-of-type(2) div{
+        width: 50%;
+    }
+
+    section:nth-of-type(2) img{
+        width: 80%;
+    }
+
 }
 
-nav ul{
-    display: flex;
-    justify-content: center; /*centrerer navigationen*/
-}
+/*media query til mobil versionen*/
 
-section:nth-of-type(1){
-    display: flex;
-    gap: 2em;
-}
-
-section:nth-of-type(1) div{
-    width: 50%;
-}
-
-
-section:nth-of-type(1) img{
-    width: 40%;
-}
-
-section:nth-of-type(2){
-    display: flex;
-    justify-content: space-around;
-    gap: 1em;
-}
-
-section:nth-of-type(2) img{
-    width: 40%;
-}
-}
-
-/*Media query til mobil version*/
-
-@media screen and (max-width:768px){
+@media screen and (max-width: 768px){
     header nav{
         display: none; /*skjuler navigationen på mobil versionen*/
     }
 
     header{
         display: flex;
-        justify-content: flex-end; /*placerer burgermenu ikon i højre side*/
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.8em 1em;
+        position: relative;
+        min-height: 60px;
+    }
+
+    .logo img{
+        max-height: 80px;
+        width: auto;
+        display: block;
     }
 
     .show{
-        display: block; /*viser navigationen når burgermenu klassen show i javascript er tilføjet*/
+        display: block; /*viser navigationen når klassen "show" er tilføjet*/
         position: absolute;
-        top:49px;
-        left:0;
-        background-color: #F5F5F5;
+        top: 100%;
+        left: 0;
+        background-color: #f5f5f5;
         width: 100%;
     }
 
+    .show ul{
+        display: flex;
+        flex-direction: column;/*links står lodret i burgermenu*/
+        align-items: center;
+        gap: 1.2em;
+        padding: 1.5em 0;
+        margin:0;
+        list-style: none;
+    }
+
     button#bars{
-        background-color: transparent; /*gør baggrunden på burgermenu knappen gennemsigtig*/
+        background-color: transparent; /*gør baggrunden på burger menu knappen gennemsigtig*/
         border: none;
+        position: absolute;
+        right: 1em;
     }
 
     section:nth-of-type(1) div{
-        padding-bottom:2em;
+        padding-bottom: 2em;
     }
 
 }
