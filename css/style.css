@@ -111,6 +111,89 @@ p{
     border-radius: 15px; /*bløde og runde kanter på knappen*/
 }
 
+.send{ /*Styling af send knappen*/
+    background-color: #8F4300;
+    color: #FFFFFF;
+    padding: 0.8em 3em;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 15px; /*bløde og runde kanter på knappen*/
+    margin-top: 15px;
+}
+
+/*Kontakt formular*/
+.kontakt-formular{
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #f5f5f5;
+    color: #1c1c1c;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.kontakt-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.kontakt-form input, .kontakt-form textarea{
+    padding: 1em; /*Indvendig afstand inde i felterne*/
+    font-family: "inter", sans-serif;
+    font-size: 18px;
+    color: #1c1c1c;
+    font-weight: 700;
+
+}
+
+.kontakt-form input::placeholder, .kontakt-form textarea::placeholder{
+    color: #1c1c1c;
+}
+
+
+
+
+/*footer*/
+.footer{
+    background-color: #C9DBE7;
+    color: #1c1c1c;
+    padding: 20px 40px;
+    position: relative;
+    width: 100%;
+    left: 0;
+    right: 0;
+
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.footer-text p{
+    margin: 2px 0;
+}
+
+.footer-icons a{
+    color: #1c1c1c;
+    font-size: 24px;
+    margin-left: 15px;
+
+}
+
+.footer-icons a:hover{
+    color: #9c3d00;
+}
+
+
+
+
+
+
 /*media query til dekstop versionen*/
 
 @media screen and (min-width: 769px){
