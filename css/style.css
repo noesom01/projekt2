@@ -118,7 +118,7 @@ p{
     display: inline-block;
     text-decoration: none;
     border-radius: 15px; /*bløde og runde kanter på knappen*/
-    margin-top: 15px;
+    margin-top: 15px; /*giver mere afstand til elementet ovenover*/
 }
 
 /*Kontakt formular*/
@@ -150,8 +150,6 @@ p{
 .kontakt-form input::placeholder, .kontakt-form textarea::placeholder{
     color: #1c1c1c;
 }
-
-
 
 
 /*footer*/
