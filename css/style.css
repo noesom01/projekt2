@@ -1,50 +1,66 @@
 *{
     box-sizing: border-box;
-    margin: 0;
+    margin: 0; /*standard margin fjernes*/
 }
 
-body{
-    font-family: "inter", sans-serif;
-    font-weight: 700;
-    color: #1c1c1c;
-}
-
-h1,h2{
-    font-family: "poppins", sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-    margin-bottom: 15px;
-}
-
-h3{
-    margin-top: 15px;
-}
-
-img{
-    max-width: 100%; /*sikre billederne responsivitet*/
-}
-
-/*Navigation*/
+/*Navigation - Header*/
 
 header{
-    padding: 1em;
+    padding: 0.8em 1em; /*luft inde i headeren*/
     background-color: #f5f5f5;
-    position: sticky;
-    top: 0;
+    position: sticky; /*Gør at header sidder fast i toppen, når man scroller*/
+    top: 0; /*headeren placeres øverst*/
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /*centrerer indholdet lodret i headeren*/
+    justify-content: space-between; /*giver afstand mellem logo og navigation.*/
 }
+
+.logo{
+    display: flex; 
+    align-items: center; 
+}
+
+.logo img{
+    max-height: 60px;
+    width: auto;
+    display: block; /*fjerner ekstra luft under billedet*/
+}
+
+header nav{
+        display: none; /*skjuler navigationen - mobilfirst prioritet*/
+ }
+
+.show{
+        display: block; /*viser navigationen når klassen "show" er tilføjet*/
+        position: absolute; /*menu under header, når man åbner den*/
+        top: 100%;
+        left: 0;
+        background-color: #f5f5f5;
+        width: 100%; /*fylder hele skærmens bredde*/
+}
+
+.show ul{
+        display: flex;
+        flex-direction: column;/*links står lodret i burgermenu*/
+        align-items: center; 
+        gap: 1.2em; /*afstand mellem links*/
+        margin:0;
+        list-style: none; /*fjerner bulletpoints*/
+}
+
+button#bars{
+        background-color: transparent; /*gør baggrunden på burger menu knappen gennemsigtig*/
+        border: none; /*fjerner kantlinje*/
+        position: absolute;
+        right: 1em; /*lægger burgermenuen 1em fra højre side*/
+        cursor: pointer; /*gør at man kan se det er en knap, man kan trykke på*/
+ }
+    
 
 nav ul{
     list-style: none; /*fjerner bulletpoints*/
     padding: 0;
-    margin: 0;
-    gap: 2em; /*afstand mellem links*/
-    display: flex;
-    align-items: center;
-    
-    
+    margin: 0; 
 }
 
 nav li a{
@@ -58,47 +74,70 @@ nav li a:hover{
     color: #9c3d00;
 }
 
-nav a.active{
+nav a.active{ /*viser hvilket link man er inde på*/
     text-decoration: underline; /*viser det aktive link med understreg i headeren*/
     color: #9c3d00;
 }
 
-.logo{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 1.5em;
-}
 
-.logo img{
-    height: 60px;
-    width: auto;
-    display: block;
-}
 
 /*Main*/
 
-main{
-    margin: 4em;
+body{
+    font-family: "inter", sans-serif;
+    font-weight: 700; /*bold skrift*/
+    color: #1c1c1c;
 }
 
-section{
-    margin: 3em;
+h1,h2{ 
+    font-family: "poppins", sans-serif;
+    font-weight: 700; /*bold skrift*/
+    font-size: 30px;
+    margin-bottom: 15px; /*afstand til indholdet under*/
+}
+
+h3{ 
+    margin-top: 15px; /*afstand til indholdet ovenover*/
+    margin-bottom: 15px; /*afstand til indholdet under*/
 }
 
 p{
     line-height: 1.6em;
-    margin-bottom: 30px;
+    margin-bottom: 30px; 
 }
+
+img{
+    max-width: 100%; /*sikre billederne responsivitet*/
+    height: auto;
+}
+
+main{
+    margin: 2em 1em;
+}
+
+section{
+    margin: 2em 1.5em; /*luft mellem sections*/
+}
+
+section:nth-of-type(1) div{
+    padding-bottom: 2em; /*luft mellem tekst og billede ved section1*/
+}
+
+section:nth-of-type(2) div{
+    padding-bottom: 2em; /*luft mellem tekst og billede ved section2*/
+}
+
+
+/*Knapper i main*/
 
 .find-ro-her{ /*Styling af Find ro her knap på forsiden*/
     background-color: #8F4300;
     color: #FFFFFF;
-    padding: 0.8em 3em;
+    padding: 0.8em 3em; 
     display: inline-block;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    text-decoration: none;
+    margin-top: 0.8em; 
+    margin-bottom: 1em; 
+    text-decoration: none; /*fjerner understregning på links*/
     border-radius: 15px; /*bløde og runde kanter på knappen*/
 }
 
@@ -106,10 +145,12 @@ p{
     background-color: #8F4300;
     color: #FFFFFF;
     padding: 0.8em 3em;
+    margin-bottom:1em;
     display: inline-block;
     text-decoration: none;
     border-radius: 15px; /*bløde og runde kanter på knappen*/
 }
+
 
 .send{ /*Styling af send knappen*/
     background-color: #8F4300;
@@ -123,19 +164,18 @@ p{
 
 /*Kontakt formular*/
 .kontakt-formular{
-    width: 100%;
+    width: 100%;/*Fylder hele skærmen (mobilfirst princip)*/
     max-width: 600px;
     margin: 40px auto;
     background-color: #f5f5f5;
     color: #1c1c1c;
     padding: 30px;
-    border-radius: 10px;
 }
 
 .kontakt-form{
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: column; /*felterne ligger lodret*/
+    gap: 15px; /*afstand mellem felterne*/
 }
 
 .kontakt-form input, .kontakt-form textarea{
@@ -144,29 +184,32 @@ p{
     font-size: 18px;
     color: #1c1c1c;
     font-weight: 700;
+    border: 2px solid #1c1c1c; /*2px bred kant om felterne*/
+    border-radius: 5px;
+    resize: none; /*gør at man ikke kan ændre i besked feltets størrelse*/
 
 }
 
 .kontakt-form input::placeholder, .kontakt-form textarea::placeholder{
-    color: #1c1c1c;
+    color: #1c1c1c; /*teksten inde i felterne er med farven 1c1c1c*/
 }
 
+.kontakt-form input:focus, .kontakt-form textarea:focus{
+    outline: 3px solid #9c3d00; /*farve på outline, når man er inde i feltet*/
+}
 
 /*footer*/
 .footer{
     background-color: #C9DBE7;
     color: #1c1c1c;
-    padding: 20px 40px;
-    position: relative;
+    padding: 20px 20px;
     width: 100%;
-    left: 0;
-    right: 0;
 
 }
 
 .footer-content{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*luft mellem tekst og ikoner, som gør at teksten ligger til venstre og ikonerne til højre*/
     align-items: center;
     margin: 0 auto;
 
@@ -174,108 +217,109 @@ p{
 
 .footer-text p{
     margin: 2px 0;
+    font-size: 15px;
 }
 
 .footer-icons a{
     color: #1c1c1c;
     font-size: 24px;
-    margin-left: 15px;
-
 }
 
 .footer-icons a:hover{
-    color: #9c3d00;
+    color: #9c3d00; /*farve på ikoner ved hover*/
 }
-
-
-
-
-
 
 /*media query til dekstop versionen*/
 
 @media screen and (min-width: 769px){
+
+    /*Navigation*/
     #bars{
         display: none; /*skjuler burgermenu ikon på desktop*/;
+    }
+
+    header nav{
+        display: block; /*viser navigationen på desktop*/;
+        padding: 1em;
     }
 
     nav ul{
         display: flex;
         justify-content: center; /*centrerer navigationen*/
-    }
-
-    section:nth-of-type(1) div{
-        width: 50%;
-    }
-
-    section:nth-of-type(1) img{
-        width: 80%;
-    }
-
-    section:nth-of-type(2) div{
-        width: 50%;
-    }
-
-    section:nth-of-type(2) img{
-        width: 80%;
-    }
-
-}
-
-/*media query til mobil versionen*/
-
-@media screen and (max-width: 768px){
-    header nav{
-        display: none; /*skjuler navigationen på mobil versionen*/
+        gap: 2em; /*afstand mellem links*/;
     }
 
     header{
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.8em 1em;
-        position: relative;
-        min-height: 60px;
+        justify-content: center; /*centrerer navigationen*/
     }
 
-    .logo img{
-        max-height: 80px;
-        width: auto;
-        display: block;
-    }
-
-    .show{
-        display: block; /*viser navigationen når klassen "show" er tilføjet*/
+    .logo{
         position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #f5f5f5;
-        width: 100%;
+        left: 1.5em; /*logo til venstre*/
     }
 
-    .show ul{
+    /*Main*/
+
+    main{
+        margin: 4em 4em;
+    }
+
+    section{
         display: flex;
-        flex-direction: column;/*links står lodret i burgermenu*/
-        align-items: center;
-        gap: 1.2em;
-        padding: 1.5em 0;
-        margin:0;
-        list-style: none;
+        align-items: flex-start; /*billede starter ud fra overskriften*/
+        justify-content: space-between; /*luft mellem tekst og billede, så tekst ligger til venstre og billede til højre*/
+        gap: 3em; /*luft mellem tekst og billede*/
+        margin: 3em 0;
     }
 
-    button#bars{
-        background-color: transparent; /*gør baggrunden på burger menu knappen gennemsigtig*/
-        border: none;
-        position: absolute;
-        right: 1em;
+    section div{
+        flex: 1; /*tekst fylder halvdelen af sketionen*/
     }
 
-    section:nth-of-type(1) div{
-        padding-bottom: 2em;
+    section img{
+        flex: 1; /*billede fylder halvdelen af sketionen*/
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    /*Kontaktformular*/
+
+    section.kontakt{
+        display: flex;
+        justify-content: flex-start; /*indhold til venstre*/
+        margin: 0;
+    }
+
+    .kontakt-formular{
+        width: 100%;
+        max-width: 600px;
+        margin: 0;
+        padding: 0; /*felterne starter helt ude i venstre side,da der ingen padding er*/
+        border-radius: 10px; /*bløde kanter*/
+    }
+
+    .kontakt-form{
+        display: flex;
+        gap: 15px;
+    }
+
+    .kontakt-form input, .kontakt-form textarea{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 15px; /*Luft mellem felterne*/
+    }
+
+    .kontakt-form .send{
+        display: inline-block;
+        align-self: flex-start; /*knappen ligger til venstre*/
+        margin-top: 15px; /*luft mellem elementet ovenover*/
+        width: auto;
     }
 
 }
-
 
 
 
