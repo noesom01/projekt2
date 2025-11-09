@@ -103,6 +103,7 @@ h1,h2{
 h3{ 
     margin-top: 15px; /*afstand til indholdet ovenover*/
     margin-bottom: 15px; /*afstand til indholdet under*/
+    font-family: "poppins", sans-serif;
     font-weight: 700;
     font-size: 26px;
 }
@@ -269,7 +270,7 @@ section.kontakt{
 }
 
 .footer-text p{
-    margin: 2px 0;
+    margin: 2px 1px;
     font-size: 16px;
     font-weight: 700;
 }
@@ -282,6 +283,8 @@ section.kontakt{
 .footer-icons a:hover{
     color: #9c3d00; /*farve på ikoner ved hover*/
 }
+
+
 
 /*media query til dekstop versionen*/
 
