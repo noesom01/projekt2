@@ -324,7 +324,7 @@ section.kontakt{
         align-items: flex-start; /*billede starter ud fra overskriften*/
         justify-content: space-between; /*luft mellem tekst og billede, så tekst ligger til venstre og billede til højre*/
         gap: 3em; /*luft mellem tekst og billede*/
-        margin: 3em 0;
+        margin: 4em 0;
     }
 
     section div{
