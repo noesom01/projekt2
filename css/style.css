@@ -74,7 +74,7 @@ nav ul{
 nav li a{
     color: #1c1c1c;
     text-decoration: none; /*fjerner understregning på links*/
-    font-size: 20px;
+    font-size: 22px;
 }
 
 nav li a:hover{
@@ -182,17 +182,17 @@ section:nth-of-type(2) div{
     align-items: center; /*de 3 bokse er placeret i midten*/
     gap: 4em; /*luft imellem indholdet*/
     padding: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 4em; /*afstand til footer*/
 
 }
 
 .cta-box{
     background-color: #f5f5f5;
-    border: 2px solid #1c1c1c; /*2px solid linje rundt om*/
+    border: 2px solid #1c1c1c; /*2px solid kant*/
     padding: 2em 1.5em;
     max-width: 350px;
     width: 100%;
-    text-align: left; /*tekst starter fra venstre side*/
+    text-align: left; /*tekst fra venstre side*/
 }
 
 .cta-box i{
@@ -270,13 +270,13 @@ section.kontakt{
 
 .footer-text p{
     margin: 2px 0;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
 }
 
 .footer-icons a{
     color: #1c1c1c;
-    font-size: 26px;
+    font-size: 28px;
 }
 
 .footer-icons a:hover{
@@ -352,14 +352,13 @@ section.kontakt{
     .cta-box{
         display: flex;
         flex-direction: column; /*indholdet*/
-        justify-content: space-between; /*Får knapperne til at ligge på samme linje*/
+        justify-content: space-between; /*Skuber indholdet fra hinanden lodret, og får knapperne til at ligge på samme linje*/
         flex: 1; /*alle 3 bokse fylder det samme*/
     }
 
     .cta-box .læs-mere{
         align-self: flex-start; /*knap i venstre side*/
     }
-
 
     /*Kontaktformular*/
 
