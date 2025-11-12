@@ -79,16 +79,16 @@ nav li a{
 
 nav li a:hover{
     text-decoration: underline; /*tilføjer understregning på links ved hover*/
-    color: #9c3d00;
+    color: #74251A;
 }
 
 button#bars :hover{
-    color: #9c3d00;
+    color: #74251A;
  }
 
 nav a.active{ /*viser hvilket link man er inde på*/
     text-decoration: underline; /*viser det aktive link med understreg i headeren*/
-    color: #9c3d00;
+    color: #74251A;
 }
 
 
@@ -145,7 +145,7 @@ section:nth-of-type(2) div{
 /*Knapper i main*/
 
 .find-ro-her{ /*Styling af Find ro her knap på forsiden*/
-    background-color: #8F4300;
+    background-color: #9C3D00;
     color: #FFFFFF;
     font-size: 20px;
     padding: 0.6em 2em; 
@@ -158,7 +158,7 @@ section:nth-of-type(2) div{
 
 
 .læs-mere{ /*Styling af læs mere knapperne*/
-    background-color: #8F4300;
+    background-color: #9C3D00;
     color: #FFFFFF;
     font-size: 20px;
     padding: 0.6em 2em;
@@ -171,7 +171,7 @@ section:nth-of-type(2) div{
 
 
 .send{ /*Styling af send knappen*/
-    background-color: #8F4300;
+    background-color: #9C3D00;
     color: #FFFFFF;
     font-size: 20px;
     padding: 0.6em 2em;
@@ -254,7 +254,7 @@ section.kontakt{
 }
 
 .kontakt-form input:focus, .kontakt-form textarea:focus{
-    outline: 3px solid #9c3d00; /*farve på outline, når man er inde i feltet*/
+    outline: 3px solid #74251A; /*farve på outline, når man er inde i feltet*/
 }
 
 /*footer*/
@@ -286,7 +286,7 @@ section.kontakt{
 }
 
 .footer-icons a:hover{
-    color: #9c3d00; /*farve på ikoner ved hover*/
+    color: #74251A; /*farve på ikoner ved hover*/
 }
 
 
