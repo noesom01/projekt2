@@ -82,8 +82,8 @@ nav li a:hover{
     color: #74251A;
 }
 
-button#bars :hover{
-    color: #74251A;
+button#bars :hover{ /*hover ved burgermenu*/
+    color: #74251A; 
  }
 
 nav a.active{ /*viser hvilket link man er inde på*/
@@ -94,8 +94,6 @@ nav a.active{ /*viser hvilket link man er inde på*/
 
 
 /*Main*/
-
-
 
 h1,h2{ 
     font-family: "poppins", sans-serif;
@@ -156,6 +154,10 @@ section:nth-of-type(2) div{
     border-radius: 15px; /*bløde og runde kanter på knappen*/
 }
 
+.find-ro-her:hover{
+    background-color: #74251A;
+}
+
 
 .læs-mere{ /*Styling af læs mere knapperne*/
     background-color: #9C3D00;
@@ -169,6 +171,10 @@ section:nth-of-type(2) div{
     border-radius: 15px; /*bløde og runde kanter på knappen*/
 }
 
+.læs-mere:hover{
+    background-color: #74251A;
+}
+
 
 .send{ /*Styling af send knappen*/
     background-color: #9C3D00;
@@ -178,6 +184,10 @@ section:nth-of-type(2) div{
     display: inline-block;
     text-decoration: none;
     border-radius: 15px; /*bløde og runde kanter på knappen*/
+}
+
+.send:hover{
+    background-color: #74251A;
 }
 
 /*3 CTA bokse på Find Ro siden*/
