@@ -92,7 +92,6 @@ nav a.active{ /*viser hvilket link man er inde på*/
 }
 
 
-
 /*Main*/
 
 h1,h2{ 
@@ -237,11 +236,11 @@ input[type=text], input[type=email], input[type=tel], textarea{ /*Styling af tek
     color: #1c1c1c;
 }
 
-input[type=text]:hover, input[type=email]:hover, input[type=tel]:hover, select:hover, textarea:hover{
+input[type=text]:hover, input[type=email]:hover, input[type=tel]:hover, textarea:hover{
     outline: 3px solid #74251A; /*hover farve når musen er på feltet*/
 }
 
-input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, select:focus, textarea:focus{ 
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, textarea:focus{ 
     outline: 3px solid #74251A;/*farven rundt om feltet når man står inde i feltet*/
 }
 
