@@ -119,7 +119,7 @@ p{
 
 
 img{
-    max-width: 100%; /*sikre billederne responsivitet*/
+    max-width: 100%; /*sikrer billederne responsivitet*/
     height: auto;
 }
 
@@ -154,41 +154,22 @@ section:nth-of-type(2) div{
     border-radius: 15px; /*bløde og runde kanter på knappen*/
 }
 
-.find-ro-her:hover{
-    background-color: #74251A;
-}
-
-
 .læs-mere{ /*Styling af læs mere knapperne*/
     background-color: #9C3D00;
     color: #FFFFFF;
     font-size: 20px;
     padding: 0.6em 2em;
+    display: inline-block;
     margin-top: 0.8em;
     margin-bottom:1em;
-    display: inline-block;
     text-decoration: none;
-    border-radius: 15px; /*bløde og runde kanter på knappen*/
+    border-radius: 15px;
 }
 
-.læs-mere:hover{
+.læs-mere:hover, .find-ro-her:hover{
     background-color: #74251A;
 }
 
-
-.send{ /*Styling af send knappen*/
-    background-color: #9C3D00;
-    color: #FFFFFF;
-    font-size: 20px;
-    padding: 0.6em 2em;
-    display: inline-block;
-    text-decoration: none;
-    border-radius: 15px; /*bløde og runde kanter på knappen*/
-}
-
-.send:hover{
-    background-color: #74251A;
-}
 
 /*3 CTA bokse på Find Ro siden*/
 
@@ -204,14 +185,14 @@ section:nth-of-type(2) div{
 
 .cta-box{
     background-color: #f5f5f5;
-    border: 2px solid #1c1c1c; /*2px solid kant*/
+    border: 2px solid #1c1c1c; /*2px solid kant rundt om*/
     padding: 2em 1.5em;
     max-width: 350px;
     width: 100%;
     text-align: left; /*tekst fra venstre side*/
 }
 
-.cta-box i{
+.cta-box i{ /*styling af ikoner i cta-boksene*/
     font-size: 32px;
     color: #1c1c1c;
     display: block;
@@ -222,57 +203,87 @@ section:nth-of-type(2) div{
     margin-bottom: 1em;
 }
 
-/*Kontakt formular*/
+/*Kontaktform*/
 
-section.kontakt{
-        display: flex;
-        justify-content: flex-start; /*indhold til venstre*/
-        margin: 0;
- }
-
-.kontakt-formular{
-    width: 100%;/*Fylder hele skærmen (mobilfirst princip)*/
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #f5f5f5;
-    color: #1c1c1c;
-    padding: 0 20px; /*felterne starter fra samme sted som overskrift og tekst*/
-    margin: 0;
-}
-
-
-.kontakt-form{
+.kontaktform{
     display: flex;
-    flex-direction: column; /*felterne ligger lodret*/
-    gap: 25px; /*afstand mellem felterne*/
+    flex-direction: column;
+    justify-content: flex-start; /*Alt indhold starter i venstre side*/
+    max-width: 600px; /*mobilbredde*/
 }
 
-.kontakt-form input, .kontakt-form textarea{
-    padding: 1em; /*Indvendig afstand inde i felterne*/
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /*afstand mellem felterne*/
+}
+
+
+input[type=text], input[type=email], input[type=tel], textarea{ /*Styling af tekst, email, telefon og besked felt*/
+    width: 100%; /*udnytter den fulde bredde på mobil*/
+    padding: 1em;
     font-family: "inter", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 500;
     color: #1c1c1c;
-    font-weight: 700;
-    border: 1.5px solid #1c1c1c; /*2px bred kant om felterne*/
-    border-radius: 3px; /*bløde kanter*/
-    resize: none; /*gør at man ikke kan ændre i besked feltets størrelse*/
+    border: 1.5px solid #1c1c1c; /*1.5px kant rundt om felterne*/
+    border-radius: 3px; /*bløde hjørner på felterne*/
+    margin: 3px 0; /*margin i top og bund, 0 margin i siderne*/
+    resize: none; /*brugerne kan ikke ændre i størrelsen på felterne (besked feltet)*/
+    background-color: #FFFFFF;
+}
+
+::placeholder{ /*teksten inde i felterne*/
+    color: #1c1c1c;
+}
+
+input[type=text]:hover, input[type=email]:hover, input[type=tel]:hover, select:hover, textarea:hover{
+    outline: 3px solid #74251A; /*hover farve når musen er på feltet*/
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, select:focus, textarea:focus{ 
+    outline: 3px solid #74251A;/*farven rundt om feltet når man står inde i feltet*/
+}
+
+
+input[type="submit"]{ /*styling af send besked knap*/
+    display: inline-block; 
+    width: auto;
+    align-self: flex-start; /*knappen starter i venstre side*/
+    background-color: #9C3D00;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 0.6em 2em;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer; /*gør at man kan se det er en knap, man kan trykke på*/
+    margin-top: 1em; /*afstand til indholdet ovenover*/
 
 }
 
-.kontakt-form input::placeholder, .kontakt-form textarea::placeholder{
-    color: #1c1c1c; /*teksten inde i felterne er med farven 1c1c1c*/
+input[type="submit"]:hover{
+    background-color: #74251A;
 }
 
-.kontakt-form input:focus, .kontakt-form textarea:focus{
-    outline: 3px solid #74251A; /*farve på outline, når man er inde i feltet*/
+/*WCAG tilgængeligheds element ift. label navn i kontaktformular*/
+.visually-hidden{
+    border: 0;
+    clip: rect(0 0 0 0 );
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
+
 
 /*footer*/
 .footer{
     background-color: #C9DBE7;
     color: #1c1c1c;
     padding: 20px 20px;
-    width: 100%;
+    width: 100%; /*udnytter den fulde bredde*/
 
 }
 
@@ -298,7 +309,6 @@ section.kontakt{
 .footer-icons a:hover{
     color: #74251A; /*farve på ikoner ved hover*/
 }
-
 
 
 /*media query til dekstop versionen*/
@@ -341,7 +351,7 @@ section.kontakt{
         display: flex;
         align-items: flex-start; /*billede starter ud fra overskriften*/
         justify-content: space-between; /*luft mellem tekst og billede, så tekst ligger til venstre og billede til højre*/
-        gap: 3em; /*luft mellem tekst og billede*/
+        gap: 3em; /*afstand mellem indhold*/
         margin: 4em 0;
     }
 
@@ -350,12 +360,11 @@ section.kontakt{
     }
 
     section img{
-        flex: 1; /*billede fylder halvdelen af sketionen*/
+        flex: 1; /*billede fylder halvdelen af sektionen*/
         width: 100%;
         max-width: 500px;
         height: auto;
     }
-
 
 
     /*3 CTA bokse på Find Ro siden*/
@@ -380,31 +389,13 @@ section.kontakt{
 
     /*Kontaktformular*/
 
-    .kontakt-formular{
-        width: 100%;
-        max-width: 600px;
-        margin: 0;
-        padding: 0; /*felterne starter helt ude i venstre side,da der ingen padding er*/
-        border-radius: 10px; /*bløde kanter*/
+    .kontaktform{
+        max-width: 700px; /*lidt breddere kontaktform på desktop*/
+        padding: 2em 0;
     }
 
-    .kontakt-form{
-        display: flex;
-        gap: 15px;
-    }
-
-    .kontakt-form input, .kontakt-form textarea{
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-        margin-top: 15px; /*Luft mellem felterne*/
-    }
-
-    .kontakt-form .send{
-        display: inline-block;
-        align-self: flex-start; /*knappen ligger til venstre*/
-        margin-top: 15px; /*luft mellem elementet ovenover*/
-        width: auto;
+    form{
+        gap: 25px;
     }
 
 }

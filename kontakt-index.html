@@ -22,6 +22,7 @@
 
 </head>
 <body>
+    <!--Navigation-->
     <header>
         <a href="forside-index.html" class="logo"><img src="img/Logo2.svg" alt="Pausepunkt logo"></a>
         <nav>
@@ -39,55 +40,35 @@
 
     </header>
 
-    <!--Hovedindhold-->
-    <main>
-        <section>
-            <div>
-                <h1>Kontakt os</h1>
+    <!--Hovedindhold - Kontaktform-->
+    <main class="kontaktform">
+        <h1>Kontakt os</h1>
 
-                <p>Har du spørgsmål eller brug for at dele noget?</p>
+        <p>Har du spørgsmål eller brug for at dele noget?</p>
 
-                <p>Skriv til os i formularen herunder - vi vender tilbage så hurtigt, vi kan.</p>
+        <p>Skriv til os i formularen herunder - vi vender tilbage så hurtigt, vi kan.</p>
 
-                <p>Du er også velkommen til at sende en mail til kontakt@pausepunkt.dk</p>
+        <p>Du er også velkommen til at sende en mail til kontakt@pausepunkt.dk</p>
+        
+        <p>eller ringe til os på 12 34 56 78. Telefonen er åben på hverdage mellem 09:00 og 17:00.</p>
 
-                <p>eller ringe til os på 12 34 56 78. Telefonen er åben på hverdage mellem 09:00 og 17:00.</p>
-            </div>
-        </section>
+        <form>
+            <label class="visually-hidden" for="navn">Navn</label>
+            <input id="navn" type="text" placeholder="Navn" required>
 
+            <label class="visually-hidden" for="mail">E-mail</label>
+            <input id="mail" type="email" placeholder="E-mail" required>
 
-        <!--Kontakt formular-->
-        <section class="kontakt">
-            <div class="kontakt-formular">
+            <label class="visually-hidden" for="telefon">Telefon</label>
+            <input id="telefon" type="tel" placeholder="Telefon">
 
-                <form action="#" method="post" class="kontakt-form">
-                <!-- Navn-->
-                 <input type="text" id="navn" name="navn" placeholder="Fulde navn" required>
+            <!--besked felt-->
+            <label class="visually-hidden" for="besked">Besked</label>
+            <textarea id="besked" placeholder="Besked" cols="30" rows="10" required></textarea>
 
-                 <!--tlf. nr.-->
-                 <input type="tel" id="telefon" name="telefon" placeholder="Telefonnummer" required>
-
-                 <!--email-->
-                 <input type="email" id="email" name="email" placeholder="E-mail" required> 
-
-                 <!--besked-->
-                 <textarea id="besked" name="besked" rows="5" placeholder="Besked"></textarea>
-
-
-                </form>
-            </div>
-
-
-        </section>
-
-
-        <section>
-                  <!--send knap-->
-
-            <a href="#" class="send">Send</a>
-
-        </section>
-  
+            <!--Send knap-->
+            <input type="submit" name="submit" value="Send besked">
+        </form>
 
     </main>
 
