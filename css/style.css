@@ -94,7 +94,7 @@ nav a.active{ /*viser hvilket link man er inde på*/
 
 /*Main*/
 
-h1,h2{ 
+h1,h2,h4{ 
     font-family: "poppins", sans-serif;
     font-weight: 700; /*bold skrift*/
     font-size: 30px;
@@ -129,6 +129,7 @@ main{
 section{
     margin: 2em 1.5em; /*luft mellem sektioner*/
 }
+
 
 section:nth-of-type(1) div{
     padding-bottom: 2em; /*luft mellem tekst og billede ved sektion1*/
@@ -200,6 +201,18 @@ section:nth-of-type(2) div{
 
 .cta-box p{
     margin-bottom: 1em;
+}
+
+/*Kildeliste på min Find Ro side*/
+.kildeliste{
+    list-style-type: disc; /*bulletpoints på kildelisten*/
+}
+
+.kildeliste li{
+    margin-bottom: 1em;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 /*Kontaktform*/
@@ -348,7 +361,7 @@ input[type="submit"]:hover{ /*hover på send besked knap*/
 
     section{
         display: flex;
-        align-items: flex-start; /*billede starter ud fra overskriften*/
+        align-items: center; /*billederne er centrerert ift. teksten*/
         justify-content: space-between; /*luft mellem tekst og billede, så tekst ligger til venstre og billede til højre*/
         gap: 3em; /*afstand mellem indhold*/
         margin: 4em 0;
@@ -385,6 +398,12 @@ input[type="submit"]:hover{ /*hover på send besked knap*/
     .cta-box .læs-mere{
         align-self: flex-start; /*knap i venstre side*/
     }
+
+
+    .kildeliste li{ 
+        max-width: 650px; /*ser visuelt bedre ud ift. at de 2 første sektioner ikke fylder hele siden*/
+    }
+
 
     /*Kontaktformular*/
 
