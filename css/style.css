@@ -401,7 +401,7 @@ input[type="submit"]:hover{ /*hover på send besked knap*/
 
 
     .kildeliste li{ 
-        max-width: 650px; /*ser visuelt bedre ud ift. at de 2 første sektioner ikke fylder hele siden*/
+        max-width: 600px; /*ser visuelt bedre ud ift. at de 2 første sektioner ikke fylder hele siden*/
     }
 
 
