@@ -210,10 +210,11 @@ section:nth-of-type(2) div{
 
 .kildeliste li{
     margin-bottom: 1em;
+    max-width: 100%;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.6;
-    max-width: 400px;
+    word-wrap: break-word; /*gør at links brydes i ordene så de ikke stikker længere ud end resten på siden*/
 }
 
 .kildeliste em{ /*gør kun titlerne på kilden kursiv*/
