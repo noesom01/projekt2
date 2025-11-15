@@ -215,6 +215,10 @@ section:nth-of-type(2) div{
     line-height: 1.6;
 }
 
+.kildeliste em{ /*gør kun titlerne på kilden kursiv*/
+    font-style: italic;
+}
+
 /*Kontaktform*/
 
 .kontaktform{
