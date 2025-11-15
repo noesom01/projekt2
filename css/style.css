@@ -263,7 +263,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, textarea
 
 
 input[type="submit"]{ /*styling af send besked knap*/
-    display: inline-block; 
+    display: inline-block;
     width: auto;
     align-self: flex-start; /*knappen starter i venstre side*/
     background-color: #9C3D00;
