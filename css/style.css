@@ -213,6 +213,7 @@ section:nth-of-type(2) div{
     font-weight: 500;
     font-size: 18px;
     line-height: 1.6;
+    max-width: 400px;
 }
 
 .kildeliste em{ /*gør kun titlerne på kilden kursiv*/
